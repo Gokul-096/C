@@ -1,10 +1,9 @@
-#include<stdio.h>
 #include<stdlib.h>
-int main()
+void deleteroll(hptr)
 {
         int a;
-        scanf("%d",a);
-        ST *prev,*temp;
+        scanf("%d",&a);
+        struct st *prev,*temp;
         temp=*ptr;
 
         while(temp!=0)
@@ -25,5 +24,4 @@ int main()
                         temp=temp->next;
                 }
         }
-}
-~         
+}       

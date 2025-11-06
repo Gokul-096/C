@@ -1,7 +1,10 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include "header.h"
 int main()
 {
+	struct st*hptr=0;
+	char op;
+	while(1)
+	{
 	printf("\t****STUDENT RECORD MENU ****\n");
 	printf("\tA/a	:  Add New Record\n");
 	printf("\tD/d	: Delete A Record\n");
@@ -12,22 +15,36 @@ int main()
 	printf("\tT/t	: Sort the List\n");
 	printf("\tL/l	: Delete All the Records\n");
 	printf("\tR/r	: Reverse the List\n");
-/*
-while(1)
-{
+        printf("\t------------------------------\n");
+	
 	printf("Enter the choice");
      scanf(" %c",&op);
-    if((op=='A')||(op=='a'));
-        add();
-     else if((op=='D')||(op=='d'));
+    if((op=='A')||(op=='a'))
+    {
+        add(&hptr);
+    }
+    else if((op=='v')||(op=='V'))
+    {
+	    save(hptr);
+    }
+    else if((op=='s')||(op=='S'))
      {
-	     scanf(" %c",dele);
-	    if((dele=='r')||(dele=='R'));
-	       deleteroll();
-              else if((dele=='n')||(dele=='N'))
-		      deletename();
+	print(hptr);     
+     }
+     else if((op=='r')||(op=='R'))
+     {
+           reverse(hptr);
+     }
+      else if((op=='L')||(op=='l'))
+     {
+           deleteall(&hptr);
+     }
+       else if((op=='e')||(op=='E'))
+     {
+           return 0;
+     }
 
-       
-*/	
+
+
+	}
 }
-

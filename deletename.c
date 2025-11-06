@@ -1,14 +1,13 @@
-#include<stdio.h>
-int main()
+void deletename(struct st**ptr)
 {
 	char a[20];
 	scanf("%s",a);
-	ST *prev,*temp;
+	struct st*prev,*temp;
 	temp=*ptr;
 
 	while(temp!=0)
 	{
-		if(temp->next==a)
+		if(temp->name==a)
 		{
                     if(temp==*ptr)
                     *ptr=temp->next;
